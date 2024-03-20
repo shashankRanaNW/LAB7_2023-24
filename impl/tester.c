@@ -24,6 +24,9 @@ void ser_test(unsigned char ans[], unsigned char* buffer, int size)
 void deser_test(struct packet* p, struct packet* p2)
 {
     printf("Deserialized struct:\n");
+    printf("Ideal:\n");
+    printPacket(p);
+    printf("Yours:\n");
     printPacket(p2);
     if(p->version != p2->version)
         printf("Deserialization Test Failed\n");
